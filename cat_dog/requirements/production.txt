@@ -1,0 +1,20 @@
+# Everything needed in production
+
+# Flask
+Flask==0.12.2
+Werkzeug==0.12.2
+Jinja2==2.9.6
+itsdangerous==0.24
+click>=5.0
+
+# API
+simplejson==3.11.1
+webargs==1.8.1
+marshmallow==2.13.6
+flask-marshmallow==0.8.0
+
+# Auth
+Flask-HTTPAuth==3.2.3
+
+# Monitoring
+raven[flask]==6.1.0
