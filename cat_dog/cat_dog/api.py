@@ -6,11 +6,11 @@ from cat_dog.extensions import auth
 
 # import scipy.misc.imresize
 import scipy.misc
-import numpy as np
 
 from keras.models import model_from_json
 
 
+import json
 class LoggedInResource(flask_restful.Resource):
     method_decorators = []
 
@@ -22,8 +22,8 @@ class CatDog(LoggedInResource):
         loaded_model = model_from_json(loaded_model_json)
         loaded_model.load_weights("first_try.h5")
         print('loaded the model')
-        print(request.form['photo'])
-        file = request.files['image']
+        # file = request.files['image']
+        file = request.files.get('photo')
         print(file.filename)
         file.filename="our.jpg"
         print(file.filename)
